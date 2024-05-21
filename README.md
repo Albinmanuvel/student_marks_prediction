@@ -1,5 +1,5 @@
-Student Marks Prediction
-Project Overview
+
+Project Overview -                                           
 Student Marks Prediction is a machine learning project aimed at predicting students' academic performance based on various factors.
 This project leverages data analysis and machine learning algorithms to forecast students' marks thus  providing insights to self improve for the students. 
 
