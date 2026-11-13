@@ -4,12 +4,12 @@ Created on Tue May 21 18:46:41 2024
 
 @author: Albin
 """
-pip install plotly
+# pip install plotly scikit-learn statsmodels
 import numpy as np
 import pandas as pd
 import plotly.express as px
 
-data = pd.read_csv("C:/Users/Albin/Documents/GitHub/student_marks_prediction/Student_Marks.csv")
+data = pd.read_csv("Student_Marks.csv")
 print(data.head(10))
 
 print(data.isnull().sum())
@@ -41,10 +41,10 @@ xtrain, xtest, ytrain, ytest = train_test_split(x, y,
 
 model = LinearRegression()
 model.fit(xtrain, ytrain)
-model.score(xtest, ytest)
+print('R2 on test set:', round(model.score(xtest, ytest), 3))
 
 p=float(input("Enter the study of the student : "))
 q=float(input("Enter the number of courses : "))
 
 features = np.array([[p, q]])
-model.predict(features)
+print('Predicted marks:', model.predict(features)[0])

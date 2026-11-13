@@ -1,8 +1,21 @@
+# Student marks prediction
 
-Project Overview -                                           
-Student Marks Prediction is a machine learning project aimed at predicting students' academic performance based on various factors.
-This project leverages data analysis and machine learning algorithms to forecast students' marks thus  providing insights to self improve for the students. 
+Linear regression that predicts a student's marks from weekly study time and the number of courses taken. A small learning project.
 
-This project has taken into consideration the duration of the students study time and the course number and has trained by using the linear regression model .
-The user needs to enter the study time and the number of courses to get the output from the model .
+## Data
+`Student_Marks.csv` - 99 students, 3 columns: `number_courses`, `time_study`, `Marks`.
 
+## What the script does (`prediction.py`)
+- Quick EDA with Plotly scatter plots and a correlation check (study time vs marks: 0.94, number of courses vs marks: 0.42).
+- 80/20 train/test split (`random_state=42`) and a `LinearRegression` model.
+- Asks for a study time and number of courses and prints the predicted marks.
+
+## Result
+Test R2 = 0.946. With only 99 rows, one feature doing most of the work and no cross-validation, treat this as a demo of the workflow, not a reliable predictor.
+
+## Run it
+```
+pip install -r requirements.txt
+python prediction.py
+```
+`prediction.ipynb` is the notebook version of the same script.
